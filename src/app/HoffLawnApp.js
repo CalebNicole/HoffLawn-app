@@ -293,7 +293,7 @@ const ChristmasLightsScreen = () => {
             ))}
           </div>
         )}
-        <button onClick={() => set("electricalDifficult")(!form.electricalDifficult)}
+        <button onClick={() => setForm(f => ({ ...f, electricalDifficult: !f.electricalDifficult }))}
           style={{ width: "100%", background: form.electricalDifficult ? "#c84b4b22" : C.bg, border: `1px solid ${form.electricalDifficult ? C.red : C.border}`, borderRadius: 8, padding: "10px 14px", color: form.electricalDifficult ? C.red : C.muted, fontSize: 13, cursor: "pointer", textAlign: "left", marginBottom: 14 }}>
           ⚡ Difficult electrical access {form.electricalDifficult ? "— YES (flag for Caleb, +$75–$150)" : "— tap if cords/plug-ins are hard to hide"}
         </button>
